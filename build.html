@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armar PC - TechStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Simulador de PC</h1>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <form id="pc-builder-form">
+                    <div class="mb-3">
+                        <label for="cpu-select" class="form-label">Procesador (CPU)</label>
+                        <select class="form-select" id="cpu-select">
+                            <option value="i5" data-price="250">Intel Core i5 - $250</option>
+                            <option value="i7" data-price="350">Intel Core i7 - $350</option>
+                            <option value="i9" data-price="500">Intel Core i9 - $500</option>
+                            <option value="ryzen5" data-price="230">AMD Ryzen 5 - $230</option>
+                            <option value="ryzen7" data-price="320">AMD Ryzen 7 - $320</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="gpu-select" class="form-label">Tarjeta gráfica (GPU)</label>
+                        <select class="form-select" id="gpu-select">
+                            <option value="gtx1660" data-price="300">GTX 1660 - $300</option>
+                            <option value="rtx3060" data-price="400">RTX 3060 - $400</option>
+                            <option value="rtx3070" data-price="550">RTX 3070 - $550</option>
+                            <option value="rtx3080" data-price="750">RTX 3080 - $750</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="ram-select" class="form-label">Memoria RAM</label>
+                        <select class="form-select" id="ram-select">
+                            <option value="8gb" data-price="80">8GB DDR4 - $80</option>
+                            <option value="16gb" data-price="150">16GB DDR4 - $150</option>
+                            <option value="32gb" data-price="280">32GB DDR4 - $280</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="storage-select" class="form-label">Almacenamiento</label>
+                        <select class="form-select" id="storage-select">
+                            <option value="512ssd" data-price="100">512GB SSD - $100</option>
+                            <option value="1tbssd" data-price="180">1TB SSD - $180</option>
+                            <option value="2tbssd" data-price="320">2TB SSD - $320</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="case-select" class="form-label">Gabinete</label>
+                        <select class="form-select" id="case-select">
+                            <option value="basic" data-price="80">Básico - $80</option>
+                            <option value="gamer" data-price="150">Gamer - $150</option>
+                            <option value="premium" data-price="250">Premium - $250</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="rgb-select" class="form-label">Iluminación RGB</label>
+                        <select class="form-select" id="rgb-select">
+                            <option value="none" data-price="0">Sin RGB - $0</option>
+                            <option value="basic" data-price="50">Básica - $50</option>
+                            <option value="full" data-price="120">Completa - $120</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Tu PC personalizada</h3>
+                        <div id="pc-preview" class="mb-4 text-center">
+                            <img src="assets/img/pc-basic.png" alt="Vista previa PC" id="pc-image" class="img-fluid" style="max-height: 300px;">
+                        </div>
+                        <div class="total-price mb-3">
+                            <h4>Total: <span id="total-price">$0</span></h4>
+                        </div>
+                        <button id="save-config" class="btn btn-primary">Finalizar simulación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/build.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+</html>

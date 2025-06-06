@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Hero section */
+.hero-section {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+}
+
+/* Simulador */
+#pc-preview {
+    background-color: #f1f3f5;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.total-price {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Formulario de contacto */
+#contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
